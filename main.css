@@ -1,38 +1,35 @@
 * {
   margin: 0;
   padding: 0;
-
 }
 body {
   background-color: rgb(17, 16, 16);
 }
+.container {
+  margin: 12px 0;
+  padding: 10px 0;
+}
 h2 {
   text-align: center;
-  /* margin: 15px 0 0; */
-  padding: 20px 0 0;
   color: white;
 }
 .eyes {
-  min-height: 100svh;
   gap: 20px;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  margin-top: 0;
+  align-items: center;
+  margin-top: 40px;
 }
 .white {
-    background-color: white;
-  /* margin: 50px; */
+  background-color: white;
   width: 400px;
   height: 590px;
   border-radius: 180px;
   display: flex;
   align-items: center;
-    overflow: hidden;
-
+  overflow: hidden;
 }
-.black{
-
+.black {
   background-color: rgb(58, 42, 42);
   display: flex;
   width: 100px;
@@ -43,9 +40,59 @@ h2 {
 }
 @keyframes eye {
   from {
-    transform: translate(320px);
+    transform: translate(350px);
   }
-  to{
+  to {
     transform: translate(0);
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    padding: 20px 0;
+  }
+  .white {
+    margin: auto 20px;
+    width: 300px;
+    height: 480px;
+  }
+  .black {
+    animation: eye 2s infinite both alternate-reverse;
+  }
+  @keyframes eye {
+    from {
+      transform: translate(280px);
+    }
+    to {
+      transform: translate(0);
+    }
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    margin: 130px 0;
+  }
+  h2 {
+    padding: 30px 0 0;
+  }
+  .eyes {
+    gap: 5px;
+  }
+  .white {
+    width: 250px;
+    height: 330px;
+  }
+
+  .black {
+    width: 60px;
+    height: 60px;
+    animation: eye 2s infinite both alternate-reverse;
+  }
+  @keyframes eye {
+    from {
+      transform: translate(150px);
+    }
+    to {
+      transform: translate(0);
+    }
   }
 }
