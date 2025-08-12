@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+body {
+  background-color: rgb(17, 16, 16);
+}
+h2 {
+  text-align: center;
+  /* margin: 15px 0 0; */
+  padding: 20px 0 0;
+  color: white;
+}
+.eyes {
+  min-height: 100svh;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-top: 0;
+}
+.white {
+    background-color: white;
+  /* margin: 50px; */
+  width: 400px;
+  height: 590px;
+  border-radius: 180px;
+  display: flex;
+  align-items: center;
+    overflow: hidden;
+
+}
+.black{
+
+  background-color: rgb(58, 42, 42);
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  animation: eye 2s infinite both alternate-reverse;
+}
+@keyframes eye {
+  from {
+    transform: translate(320px);
+  }
+  to{
+    transform: translate(0);
+  }
+}
